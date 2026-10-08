@@ -21,9 +21,10 @@ const themeButtons = document.querySelectorAll('[data-theme]');
 const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
 
 function applyTheme(theme) {
-  document.body.classList.remove('light-theme', 'crt-theme');
+  document.body.classList.remove('light-theme', 'crt-theme', 'circus-theme');
   if (theme === 'light') document.body.classList.add('light-theme');
   if (theme === 'crt') document.body.classList.add('crt-theme');
+  if (theme === 'circus') document.body.classList.add('circus-theme');
   themeButtons.forEach((button) => {
     const active = button.dataset.theme === theme;
     button.classList.toggle('is-active', active);
@@ -37,3 +38,12 @@ themeButtons.forEach((button) => {
 });
 
 applyTheme(savedTheme);
+
+const circusHero = document.querySelector('.hero');
+const updateCircusParallax = () => {
+  if (!circusHero || !document.body.classList.contains('circus-theme')) return;
+  const offset = Math.max(0, window.scrollY - circusHero.offsetTop);
+  circusHero.style.setProperty('--circus-parallax', `${offset}px`);
+};
+window.addEventListener('scroll', updateCircusParallax, { passive: true });
+updateCircusParallax();
