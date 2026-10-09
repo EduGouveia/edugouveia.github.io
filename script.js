@@ -47,3 +47,18 @@ const updateCircusParallax = () => {
 };
 window.addEventListener('scroll', updateCircusParallax, { passive: true });
 updateCircusParallax();
+
+const tentRoof = document.querySelector('.tent-roof');
+const spinTentRoof = () => {
+  tentRoof?.classList.remove('animar-giro');
+  if (tentRoof) void tentRoof.offsetWidth;
+  tentRoof?.classList.add('animar-giro');
+};
+
+tentRoof?.addEventListener('click', spinTentRoof);
+tentRoof?.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    spinTentRoof();
+  }
+});
