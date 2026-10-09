@@ -14,4 +14,6 @@ body.circus-theme .code-card,body.circus-theme .orbit,body.circus-theme .float-t
 @media(prefers-reduced-motion:reduce){body.circus-theme .circus-tent,.circus-icons,.spotlight,.confetti,.effect-fireworks:hover .effect-icon{animation:none}.effect-card,.effect-icon{transition:none}}
 body.circus-theme .brand,body.circus-theme h1,body.circus-theme h2,body.circus-theme h3{font-family:Ewert,Georgia,serif;letter-spacing:.02em}
 body.circus-theme .circus-tent{transform:translate(-50%,calc(var(--circus-parallax,0px) * -.12));animation:none}body.circus-theme .circus-marquee{transform:translate(-50%,calc(var(--circus-parallax,0px) * -.045))}
+body.circus-theme .hero-copy{position:relative;z-index:2}body.circus-theme .hero-visual{position:relative;z-index:1}body.circus-theme .circus-sky{z-index:0}
+body.circus-theme .hero h1{font-size:calc(clamp(42px,6vw,78px) - 4px)}
 .tent-roof{cursor:pointer;pointer-events:visiblePainted;transform-box:fill-box;transform-origin:center}.tent-roof:focus-visible{outline:none;filter:drop-shadow(0 0 8px #f7c71b)}.animar-giro{animation:efeitoGiro 2s ease-in-out forwards}@keyframes efeitoGiro{0%{transform:rotate(0deg)}70%{transform:rotate(900deg)}100%{transform:rotate(720deg)}}
